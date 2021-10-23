@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "user:dev": "nx run user:serve",
+    "user:build": "nx build user --skip-nx-cache",
+    "admin:dev": "nx run admin:serve",
+    "admin:build": "nx build admin --skip-nx-cache",
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test"

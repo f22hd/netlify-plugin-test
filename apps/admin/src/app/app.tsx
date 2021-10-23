@@ -8,7 +8,7 @@ export function App() {
     <div className={styles.app}>
       <header className="flex">
         <Logo width="75" height="75" />
-        <h1>Welcome to user!</h1>
+        <h1>Welcome to admin!</h1>
       </header>
     </div>
   );
