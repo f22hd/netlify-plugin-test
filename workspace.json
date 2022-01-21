@@ -3,6 +3,8 @@
   "projects": {
     "admin": "apps/admin",
     "admin-e2e": "apps/admin-e2e",
+    "organization": "apps/organization",
+    "organization-e2e": "apps/organization-e2e",
     "user": "apps/user",
     "user-e2e": "apps/user-e2e"
   }
