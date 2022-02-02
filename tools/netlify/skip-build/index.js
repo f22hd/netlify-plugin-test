@@ -5,7 +5,7 @@ module.exports = {
     const projectName =
       process.env.PROJECT_NAME || basename(constants.PUBLISH_DIR);
     const lastDeployedCommit = process.env.CACHED_COMMIT_REF;
-    const latestCommit = 'HEAD';
+    const latestCommit = process.env.COMMIT_REF;
     const firstDeployment =
       process.env.CACHED_COMMIT_REF === process.env.COMMIT_REF;
     const projectHasChanged = projectChanged(
@@ -15,9 +15,11 @@ module.exports = {
     );
 
     console.log(
-      firstDeployment,
-      process.env.CACHED_COMMIT_REF,
-      process.env.COMMIT_REF
+      { projectName },
+      { projectHasChanged },
+      { firstDeployment },
+      { CACHED_COMMIT_REF: process.env.CACHED_COMMIT_REF },
+      { COMMIT_REF: process.env.COMMIT_REF }
     );
     if (!projectHasChanged && !firstDeployment) {
       utils.build.cancelBuild(
