@@ -1,4 +1,2 @@
 [[plugins]]
-  package="/tools/netlify/skip-build"
-    [plugins.inputs]
-      projectName = "root"
+  package = "/tools/netlify/skip-build"
