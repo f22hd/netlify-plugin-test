@@ -9,6 +9,7 @@
     "admin:build": "nx build admin --prod --skip-nx-cache",
     "org:dev": "nx run organization:serve",
     "org:build": "nx build organization --prod --skip-nx-cache",
+    "example01:build": "nx build example01 --prod --skip-nx-cache",
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test"
