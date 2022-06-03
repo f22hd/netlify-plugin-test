@@ -10,11 +10,19 @@ module.exports = {
       process.env.CACHED_COMMIT_REF === process.env.COMMIT_REF;
     const isForcedDeployment = process.env.NX_FORCE_DEPLOYMENT || false;
 
+    console.log('isForcedDeployment',isForcedDeployment);
+    console.log('is ManualDeployment',isManualDeployment(isForcedDeployment));
+
     const projectHasChanged = projectChanged(
       projectName,
       lastDeployedCommit,
       latestCommit,
     )
+
+    console.log('projectHasChanged',projectHasChanged)
+    console.log('firstDeployment',firstDeployment)
+
+    console.log('should be canceled',!projectHasChanged && !firstDeployment && !isManualDeployment(isForcedDeployment));
 
     if (!projectHasChanged && !firstDeployment && !isManualDeployment(isForcedDeployment)) {
       utils.build.cancelBuild(
@@ -34,5 +42,5 @@ function projectChanged(currentProject, fromHash, toHash) {
 }
 
 function isManualDeployment(isForcedDeployment){
-  return isForcedDeployment === true;
+  return isForcedDeployment === 'true';
 }
