@@ -23,6 +23,7 @@ module.exports = {
     console.log('firstDeployment',firstDeployment)
 
     console.log('should be canceled',!projectHasChanged && !firstDeployment && !isManualDeployment(isForcedDeployment));
+    console.log('isManualDeployment',isManualDeployment(isForcedDeployment));
 
     if (!projectHasChanged && !firstDeployment && !isManualDeployment(isForcedDeployment)) {
       utils.build.cancelBuild(
