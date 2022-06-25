@@ -10,6 +10,7 @@ export function App() {
         <Logo width="75" height="75" />
         <h1>Welcome to user!</h1>
         <p>Coming soon...</p>
+        <p>Coming soon...</p>
       </header>
     </div>
   );
