@@ -11,6 +11,7 @@ export function App() {
         <h1>Welcome to user!</h1>
         <p>Coming soon...</p>
         <p>Coming soon...</p>
+        <p>Coming soon...</p>
       </header>
     </div>
   );
